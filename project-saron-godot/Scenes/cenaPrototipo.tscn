@@ -34,7 +34,7 @@ shape = SubResource("BoxShape3D_emrvb")
 [node name="PlayerSprite" parent="." unique_id=860784394 instance=ExtResource("2_vckwu")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1627328882]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.384557, 1.2715635, -0.081433296)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5521557, 1.2715635, -0.081433296)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=499177349]
 mesh = SubResource("BoxMesh_emrvb")
