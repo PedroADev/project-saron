@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://d3vsjj7l26y6f"]
+
+[ext_resource type="PackedScene" uid="uid://ybj81n271dfy" path="res://Scenes/playerSprite.tscn" id="2_vckwu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v2riq"]
+albedo_color = Color(0.87, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_v2riq"]
+material = SubResource("StandardMaterial3D_v2riq")
+size = Vector3(1, 0.1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_emrvb"]
+size = Vector3(30, 0.1, 30)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_emrvb"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_emrvb"]
+material = SubResource("StandardMaterial3D_emrvb")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vckwu"]
+
+[node name="Node3D" type="Node3D" unique_id=39018078]
+
+[node name="Floor(StaticBody3D)" type="StaticBody3D" parent="." unique_id=1720845519]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor(StaticBody3D)" unique_id=191205778]
+transform = Transform3D(30, 0, 0, 0, 1, 0, 0, 0, 30, 0, 0, 0)
+mesh = SubResource("BoxMesh_v2riq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor(StaticBody3D)" unique_id=587180142]
+shape = SubResource("BoxShape3D_emrvb")
+
+[node name="PlayerSprite" parent="." unique_id=860784394 instance=ExtResource("2_vckwu")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1627328882]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.384557, 1.2715635, -0.081433296)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=499177349]
+mesh = SubResource("BoxMesh_emrvb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1299204890]
+shape = SubResource("BoxShape3D_vckwu")
+
+[node name="Luz(DirectionalLight3D)" type="DirectionalLight3D" parent="." unique_id=191074554]
+transform = Transform3D(0.7223398, -0.39745042, 0.5659138, -7.469479e-09, 0.8183405, 0.5747338, -0.69153833, -0.4151531, 0.5911199, 0, 15.1260605, 0)

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://ybj81n271dfy"]
+
+[ext_resource type="Script" uid="uid://bqcw42lsajjge" path="res://Scripts/player.gd" id="1_kfkw3"]
+[ext_resource type="Texture2D" uid="uid://dbrgf6e3jryfu" path="res://Arren PNGtube Boca Aberta.png" id="2_j8lb2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j8lb2"]
+size = Vector3(1.0428467, 1.2, 1)
+
+[node name="PlayerSprite" type="CharacterBody3D" unique_id=818270334]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+script = ExtResource("1_kfkw3")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=794662886]
+transform = Transform3D(0.235, 0, 0, 0, 0.20740211, 0.110495985, 0, -0.110495985, 0.20740211, 0, 0, 0)
+texture = ExtResource("2_j8lb2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1871062229]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.025, 0, 0.025)
+shape = SubResource("BoxShape3D_j8lb2")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=381211264]
+transform = Transform3D(1, 0, 0, 0, 0.64278764, 0.76604444, 0, -0.76604444, 0.64278764, 0, 14, 10)
+projection = 1
+size = 20.0
+far = 100.0
